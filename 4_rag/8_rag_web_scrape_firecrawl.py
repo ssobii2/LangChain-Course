@@ -25,7 +25,7 @@ def create_vector_store():
     # Step 1: Crawl the website using FireCrawlLoader
     print("Begin crawling the website...")
     loader = FireCrawlLoader(
-        api_key=api_key, url="https://apple.com", mode="scrape")
+        api_key=api_key, url="https://www.xbox.com", mode="scrape")
     docs = loader.load()
     print("Finished crawling the website.")
 
@@ -89,7 +89,7 @@ def query_vector_store(query):
 
 
 # Define the user's question
-query = "Apple Intelligence?"
+query = "Xbox Series X?"
 
 # Query the vector store with the user's question
 query_vector_store(query)

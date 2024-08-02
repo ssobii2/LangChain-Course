@@ -6,7 +6,9 @@ from langchain.agents import AgentExecutor, create_tool_calling_agent
 from langchain.pydantic_v1 import BaseModel, Field
 from langchain_core.tools import StructuredTool, Tool
 from langchain_openai import ChatOpenAI
+from dotenv import load_dotenv
 
+load_dotenv()
 
 # Functions for the tools
 def greet_user(name: str) -> str:

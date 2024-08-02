@@ -91,7 +91,7 @@ agent_executor = AgentExecutor.from_agent_and_tools(
 )
 
 # Test the agent with sample queries
-response = agent_executor.invoke({"input": "Search for Apple Intelligence"})
+response = agent_executor.invoke({"input": "Search for Xbox Series X"})
 print("Response for 'Search for LangChain updates':", response)
 
 response = agent_executor.invoke({"input": "Multiply 10 and 20"})

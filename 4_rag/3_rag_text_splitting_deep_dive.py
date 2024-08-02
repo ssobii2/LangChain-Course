@@ -1,5 +1,5 @@
 import os
-
+from dotenv import load_dotenv
 from langchain.text_splitter import (
     CharacterTextSplitter,
     RecursiveCharacterTextSplitter,
@@ -10,6 +10,8 @@ from langchain.text_splitter import (
 from langchain_community.document_loaders import TextLoader
 from langchain_community.vectorstores import Chroma
 from langchain_openai import OpenAIEmbeddings
+
+load_dotenv()
 
 # Define the directory containing the text file
 current_dir = os.path.dirname(os.path.abspath(__file__))
@@ -23,7 +25,7 @@ if not os.path.exists(file_path):
     )
 
 # Read the text content from the file
-loader = TextLoader(file_path)
+loader = TextLoader(file_path, encoding="utf-8")
 documents = loader.load()
 
 # Define the embedding model

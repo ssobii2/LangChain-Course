@@ -6,7 +6,9 @@ from langchain.agents import AgentExecutor, create_tool_calling_agent
 from langchain.pydantic_v1 import BaseModel, Field
 from langchain.tools import tool
 from langchain_openai import ChatOpenAI
+from dotenv import load_dotenv
 
+load_dotenv()
 
 # Simple Tool with one parameter without args_schema
 # This is a basic tool that does not require an input schema.

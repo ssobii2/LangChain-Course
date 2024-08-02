@@ -71,7 +71,7 @@ chain = (
 )
 
 # Run the chain
-result = chain.invoke({"product_name": "MacBook Pro"})
+result = chain.invoke({"product_name": "Xbox Series X"})
 
 # Output
 print(result)

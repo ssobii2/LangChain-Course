@@ -16,7 +16,7 @@ persistent_directory = os.path.join(db_dir, "chroma_db_apple")
 
 # Step 1: Scrape the content from apple.com using WebBaseLoader
 # WebBaseLoader loads web pages and extracts their content
-urls = ["https://www.apple.com/"]
+urls = ["https://www.xbox.com/"]
 
 # Create a loader for web content
 loader = WebBaseLoader(urls)
@@ -54,7 +54,7 @@ retriever = db.as_retriever(
 )
 
 # Define the user's question
-query = "What new products are announced on Apple.com?"
+query = "What are the products offered by Xbox.com?"
 
 # Retrieve relevant documents based on the query
 relevant_docs = retriever.invoke(query)
